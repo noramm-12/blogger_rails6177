@@ -20,6 +20,8 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # username: nora
+  # password: <%= ENV['BLOGGER_RAILS6_DATABASE_PASSWORD'] %>
 
 development:
   <<: *default
@@ -82,5 +84,8 @@ test:
 production:
   <<: *default
   database: blogger_rails6177_production
-  username: blogger_rails6177
-  password: <%= ENV['BLOGGER_RAILS6177_DATABASE_PASSWORD'] %>
+  # username: blogger_rails6177
+  # password: <%= ENV['BLOGGER_RAILS6177_DATABASE_PASSWORD'] %>
+
+  username: nora
+  password: <%= ENV['BLOGGER_RAILS6_DATABASE_PASSWORD'] %>
